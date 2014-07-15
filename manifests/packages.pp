@@ -1,7 +1,6 @@
 # == Define: base::packages
 #
 define base::packages (
-
   $ensure   = undef,
   $provider = undef,
   ) {
