@@ -1,6 +1,6 @@
-# == Class: role_base::files
+# == Class: base::files
 #
-class role_base::files {
+class base::files {
 
 # Hiera config file
   file { '/etc/puppet/hiera.yaml':
@@ -18,5 +18,5 @@ class role_base::files {
     replace => false,
     require => File['/etc/puppet/hieradata'],
   }
-  
+
 }
