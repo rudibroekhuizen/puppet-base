@@ -45,7 +45,7 @@ etc.), mention it here.
 
 ### Beginning with base
 
-The very basic steps needed for a user to get the module up and running.
+curl https://raw.githubusercontent.com/rudibroekhuizen/puppet-base/master/scripts/bootstrap.sh > bootstrap.sh; chmod +x bootstrap.sh;./bootstrap.sh
 
 If your most recent release breaks compatibility or requires particular steps
 for upgrading, you may wish to include an additional section here: Upgrading
