@@ -1,6 +1,7 @@
 # == Define: base::define_users
 #
-define base::define_users
+define base::define_users (
+
   $password = undef,
   $groups   = undef,
   $ensure   = undef,
