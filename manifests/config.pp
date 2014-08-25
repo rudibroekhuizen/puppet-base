@@ -9,3 +9,4 @@ class base::config {
     ip           => $::ipaddress,
     target       => '/etc/hosts',
   }
+}
