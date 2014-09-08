@@ -1,6 +1,6 @@
-# == Define: base::packages
+# == Define: base::define_packages
 #
-define base::packages (
+define base::define_packages (
   $ensure = undef,
   ) {
 
