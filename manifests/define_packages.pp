@@ -1,8 +1,8 @@
 # == Define: base::define_packages
 #
 define base::define_packages (
-  $ensure,
-  $provider,
+  $ensure   = under,
+  $provider = undef,
   ) {
 
   package { $title:
