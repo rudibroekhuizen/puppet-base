@@ -1,11 +1,13 @@
 # == Define: base::define_packages
 #
 define base::define_packages (
-  $ensure = undef,
+  $ensure,
+  $provider,
   ) {
 
   package { $title:
-    ensure => $ensure,
+    ensure   => $ensure,
+    provider => $provider,
   }
 
 }
