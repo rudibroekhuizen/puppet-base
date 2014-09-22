@@ -2,15 +2,25 @@
 #
 define base::define_users (
 
-  $password = undef,
-  $groups   = undef,
-  $ensure   = undef,
-  ){
+  $username = $title,
+  $comment,
+  $password,
+  $groups,
+  $ensure,
+  $ssh_key,
+  $shell, 
 
-  user { $title:
+  ) {
+
+  user { $username:
+    ensure   => $ensure,
     password => $password,
     groups   => $groups,
-    ensure   => $ensure,
+    shell    => $shell,
   }
+
+  group { $username: 
+    ensure => present, 
+  }  
 
 }
