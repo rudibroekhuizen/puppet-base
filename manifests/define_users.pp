@@ -1,7 +1,6 @@
 # == Define: base::define_users
 #
 define base::define_users (
-
   $username = $title,
   $comment,
   $password,
@@ -9,8 +8,7 @@ define base::define_users (
   $ensure,
   $ssh_key,
   $shell, 
-
-  ) {
+) {
 
   user { $username:
     ensure   => $ensure,
