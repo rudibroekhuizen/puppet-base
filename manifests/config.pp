@@ -12,7 +12,7 @@ class base::config {
   
   wget::fetch { "grml-etc-core .screenrc":
     source      => 'http://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic',
-    destination => '/etc/screenrc/.screenrc',
+    destination => '/etc/screenrc',
     timeout     => 0,
     verbose     => false,
   }
