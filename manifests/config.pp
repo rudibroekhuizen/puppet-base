@@ -19,20 +19,20 @@ class base::config {
       'set spec[user = "%wheel"]/host_group/command ALL',
       'set spec[user = "%wheel"]/host_group/command/runas_user ALL',
       'set spec[user = '%wheel']/host_group/command/tag NOPASSWD',
-      ]
+      ],
   }
 
- augeas { "sshdns":
-  context => "/files/etc/ssh/sshd_config",
-  changes => [
-    "set UseDNS 'no'",
-    ],
+  augeas { "sshdns":
+    context => "/files/etc/ssh/sshd_config",
+    changes => [
+      "set UseDNS 'no'",
+      ],
   }
 
   augeas { "sshGSSAPIauth":
     context => "/files/etc/ssh/sshd_config",
     changes => [
-        "set GSSAPIAuthentication 'no'",
+      "set GSSAPIAuthentication 'no'",
       ],
   }
   
