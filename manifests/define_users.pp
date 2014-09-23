@@ -34,7 +34,8 @@ define base::define_users (
     owner   => $username, 
     group   => $username, 
     mode    => '0700',
-    require => Group["${username}"],
+    require => [Group["wheel"],
+                Group["${username}"]],
   } 
 
 # Create .ssh directory
