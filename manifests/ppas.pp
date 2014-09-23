@@ -5,7 +5,10 @@ class base::ppas (
   ){
 
 case $::osfamily {
-  debian: { apt::ppa { $ppas_array: }}
+  debian: { 
+    include apt
+    apt::ppa { $ppas_array: }
+    }
   }
   
 }
