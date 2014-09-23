@@ -10,4 +10,31 @@ class base::config {
     target       => '/etc/hosts',
   }
   
+# Allow users belonging wheel group to use sudo
+  augeas { 'sudowheel':
+	  context => '/files/etc/sudoers', # target file is /etc/sudoers
+	  changes => [
+      # allow wheel users to use sudo
+	    'set spec[user = "%wheel"]/user %wheel',
+	    'set spec[user = "%wheel"]/host_group/host ALL',
+	    'set spec[user = "%wheel"]/host_group/command ALL',
+	    'set spec[user = "%wheel"]/host_group/command/runas_user ALL',
+      'set spec[user = '%wheel']/host_group/command/tag NOPASSWD',
+	    ]
+	}
+
+ augeas { "sshdns":
+  context => "/files/etc/ssh/sshd_config",
+  changes => [
+    "set UseDNS 'no'",
+    ],
+  }
+
+  augeas { "sshGSSAPIauth":
+    context => "/files/etc/ssh/sshd_config",
+    changes => [
+        "set GSSAPIAuthentication 'no'",
+      ],
+  }
+  
 }
