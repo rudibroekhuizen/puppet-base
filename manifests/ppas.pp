@@ -5,7 +5,7 @@ class base::ppas (
   ){
 
 case $::osfamily {
-  debian: { create_resources('apt::ppa', $ppas_array) }
+  apt::ppa { $ppas_array: }
   }
 }
 
