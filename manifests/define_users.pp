@@ -76,6 +76,15 @@ file { "/home/${username}/.ssh":
     require     => File["/home/${username}"],
   }
 
+# Download vim configuration file
+  wget::fetch { "/home/${username}/.vim":
+    source      => "http://git.grml.org/f/grml-etc-core/etc/vim/vimrc",
+    destination => "/home/${username}/.vimrc",
+    timeout     => 0,
+    verbose     => false,
+    require     => File["/home/${username}"],
+  }
+
 # Download zsh configuration file
   wget::fetch { "/home/${username}/.zshrc":
     source      => "http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc",
@@ -84,6 +93,5 @@ file { "/home/${username}/.ssh":
     verbose     => false,
     require     => File["/home/${username}"],
   }
-
 
 }
