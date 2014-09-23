@@ -3,7 +3,7 @@
 define base::define_users (
   $username = $title,
   $comment,
-  $password,
+  #$password,
   $groups,
   $ensure,
   $ssh_key,
