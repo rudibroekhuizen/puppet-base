@@ -27,7 +27,7 @@ class base::config {
     changes => [
       "set UseDNS 'no'",
       ],
-    notify  => Service["sshd"],
+    #notify  => Service["sshd"],
   }
 
   augeas { "sshGSSAPIauth":
