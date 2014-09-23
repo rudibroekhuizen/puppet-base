@@ -22,11 +22,12 @@ class base::config {
       ],
   }
 
-  augeas { "sshdns":
+  augeas { "sshd_config":
     context => "/files/etc/ssh/sshd_config",
     changes => [
       "set UseDNS 'no'",
       ],
+    notify  => Service["sshd"],
   }
 
   augeas { "sshGSSAPIauth":
