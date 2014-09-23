@@ -68,12 +68,22 @@ file { "/home/${username}/.ssh":
   }
 
 # Download screen configuration file
-  wget::fetch { "${username} .screenrc":
+  wget::fetch { "/home/${username}/.screenrc":
     source      => "http://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic",
     destination => "/home/${username}/.screenrc",
     timeout     => 0,
     verbose     => false,
     require     => File["/home/${username}"],
   }
+
+# Download zsh configuration file
+  wget::fetch { "/home/${username}/.zshrc":
+    source      => "http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc",
+    destination => "/home/${username}/.zshrc",
+    timeout     => 0,
+    verbose     => false,
+    require     => File["/home/${username}"],
+  }
+
 
 }
