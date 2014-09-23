@@ -50,6 +50,7 @@ file { "/home/${username}/.ssh":
     require => File["/home/${username}/.ssh"],
     }
 
+# Public key
  if $ssh_key {
     ssh_authorized_key { $ssh_key['comment']:
       ensure  => present,
@@ -60,6 +61,7 @@ file { "/home/${username}/.ssh":
     }
   }
 
+# Download screen configuration file
   wget::fetch { "${username} .screenrc":
     source      => "http://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic",
     destination => "/home/${username}/.screenrc",
