@@ -14,7 +14,6 @@ class base::config {
   augeas { 'sudowheel':
 	  context => '/files/etc/sudoers', # target file is /etc/sudoers
 	  changes => [
-      # allow wheel users to use sudo
 	    'set spec[user = "%wheel"]/user %wheel',
 	    'set spec[user = "%wheel"]/host_group/host ALL',
 	    'set spec[user = "%wheel"]/host_group/command ALL',
