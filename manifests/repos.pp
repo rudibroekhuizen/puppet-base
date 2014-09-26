@@ -11,9 +11,6 @@ class base::repos (
     }
     redhat: {
       include epel
-      #class { 'yum':
-      #  extrarepo => [ 'epel' ],
-      #}
     }
   }
   
