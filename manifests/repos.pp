@@ -1,6 +1,6 @@
-# == Class: base::ppas
+# == Class: base::repos
 #
-class base::ppas (
+class base::repos (
   $ppas_array,
   ){
 
