@@ -10,8 +10,9 @@ class base::repos (
       apt::ppa { $repos_array_debian: }
     }
     redhat: {
-      class { 'yum':
-        extrarepo => [ 'epel' ],
+      include epel
+      #class { 'yum':
+      #  extrarepo => [ 'epel' ],
       }
     }
   }
