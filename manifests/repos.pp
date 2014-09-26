@@ -9,6 +9,9 @@ class base::repos (
       include apt
       apt::ppa { $ppas_array: }
     }
+    redhat: {
+      include yum
+    }
   }
   
 }
