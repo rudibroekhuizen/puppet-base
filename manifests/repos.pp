@@ -13,7 +13,7 @@ class base::repos (
       include epel
       #class { 'yum':
       #  extrarepo => [ 'epel' ],
-      }
+      #}
     }
   }
   
