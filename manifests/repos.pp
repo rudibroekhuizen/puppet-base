@@ -7,7 +7,7 @@ class base::repos (
   case $::osfamily {
     debian: { 
       include apt
-      apt::ppa { $ppas_array: }
+      apt::ppa { $repos_array_debian: }
     }
     redhat: {
       include yum
