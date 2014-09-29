@@ -56,7 +56,7 @@ file { "/home/${username}/.ssh":
     require => File["/home/${username}/.ssh"],
     }
 
-# Public key
+# Add public key
  if $ssh_key {
     ssh_authorized_key { $ssh_key['comment']:
       ensure  => present,
