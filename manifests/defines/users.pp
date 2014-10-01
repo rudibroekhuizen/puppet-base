@@ -3,7 +3,8 @@
 define base::defines::users (
   $username = $title,
   $comment,
-  #$password,
+  $password,
+  $email,
   $groups,
   $ensure,
   $ssh_key,
@@ -92,6 +93,15 @@ file { "/home/${username}/.ssh":
     timeout     => 0,
     verbose     => false,
     require     => File["/home/${username}"],
+  }
+
+# Configure Git
+  git::config { 'user.name':
+    value => $comment,
+  }
+
+  git::config { 'user.email':
+    value => $email,
   }
 
 }
