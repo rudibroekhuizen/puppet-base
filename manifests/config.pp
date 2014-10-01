@@ -10,6 +10,7 @@ class base::config {
     target       => '/etc/hosts',
   }
   
+# Set timezone
   class { 'timezone':
     timezone => 'Europe/Amsterdam',
   }
