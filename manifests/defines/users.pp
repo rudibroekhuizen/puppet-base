@@ -68,6 +68,17 @@ file { "/home/${username}/.ssh":
     }
   }
 
+# Configure Git
+  git::config { 'user.name':
+    value => $comment,
+    require => File["/home/${username}"],
+  }
+
+  git::config { 'user.email':
+    value => $email,
+    require => File["/home/${username}"],
+  }
+
 # Download screen configuration file
   wget::fetch { "/home/${username}/.screenrc":
     source      => "http://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic",
@@ -93,15 +104,6 @@ file { "/home/${username}/.ssh":
     timeout     => 0,
     verbose     => false,
     require     => File["/home/${username}"],
-  }
-
-# Configure Git
-  git::config { 'user.name':
-    value => $comment,
-  }
-
-  git::config { 'user.email':
-    value => $email,
   }
 
 }
