@@ -69,14 +69,18 @@ file { "/home/${username}/.ssh":
   }
 
 # Configure Git
+  include git
+  
   git::config { 'user.name':
     value => $comment,
-    require => File["/home/${username}"],
+    require => [File["/home/${username}]",
+                Class['git']],
   }
 
   git::config { 'user.email':
     value => $email,
-    require => File["/home/${username}"],
+    require => [File["/home/${username}]",
+                Class['git']],
   }
 
 # Download screen configuration file
