@@ -10,6 +10,10 @@ class base::config {
     target       => '/etc/hosts',
   }
   
+  class { 'timezone':
+    timezone => 'Europe/Amsterdam',
+  }
+
 # Allow users belonging wheel group to use sudo
   augeas { 'sudowheel':
     context => '/files/etc/sudoers', # target file is /etc/sudoers
