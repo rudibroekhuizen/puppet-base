@@ -73,13 +73,13 @@ file { "/home/${username}/.ssh":
   
   git::config { 'user.name':
     value => $comment,
-    require => [File["/home/${username}]",
+    require => [File["/home/${username}"],
                 Class['git']],
   }
 
   git::config { 'user.email':
     value => $email,
-    require => [File["/home/${username}]",
+    require => [File["/home/${username}"],
                 Class['git']],
   }
 
