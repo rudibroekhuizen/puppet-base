@@ -64,7 +64,7 @@ file { "/home/${username}/.ssh":
       user    => $username,
       type    => $ssh_key['type'],
       key     => $ssh_key['key'],
-      require => File["/home/${username}/.ssh/authorized_keys"]
+      require => File["/home/${username}/.ssh/authorized_keys"],
     }
   }
 
