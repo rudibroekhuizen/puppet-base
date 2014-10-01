@@ -59,7 +59,7 @@ file { "/home/${username}/.ssh":
 
 # Add public key
  if $ssh_key {
-    ssh_authorized_key { $ssh_key['comment']:
+    ssh_authorized_key { $email:
       ensure  => present,
       user    => $username,
       type    => $ssh_key['type'],
