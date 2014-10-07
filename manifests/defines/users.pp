@@ -3,7 +3,6 @@
 define base::defines::users (
   $username = $title,
   $comment,
-  #$password,
   $email,
   $groups,
   $ensure,
@@ -18,10 +17,9 @@ define base::defines::users (
 
 # Create user
   user { $username:
-    ensure   => $ensure,
-    #password => $password,
-    groups   => $groups,
-    shell    => $shell,
+    ensure => $ensure,
+    groups => $groups,
+    shell  => $shell,
   }
 
 # Create group
