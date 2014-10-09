@@ -4,7 +4,7 @@ class base::files {
 
   # Puppetfile
   file { '/etc/puppet/Puppetfile':
-    source  => 'puppet:///modules/base/Puppetfile',
+    source  => 'puppet:///modules/role_base/Puppetfile',
   }
 
   # Hiera config file
