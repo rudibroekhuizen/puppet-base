@@ -2,9 +2,14 @@
 #
 class base::files {
 
-# Hiera config file
+  # Hiera config file
   file { '/etc/puppet/hiera.yaml':
     source  => 'puppet:///modules/base/hiera.yaml',
+  }
+  
+  # Puppetfile
+  file { '/etc/puppet/Puppetfile':
+    source  => 'puppet:///modules/base/Puppetfile',
   }
 
   # Create hieradata directory
