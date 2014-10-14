@@ -10,6 +10,11 @@ class base::config {
     target       => '/etc/hosts',
   }
   
+# Create wheel group
+  group { 'wheel': 
+    ensure => present,
+  }
+  
 # Set timezone
   class { 'timezone':
     timezone => 'Europe/Amsterdam',
