@@ -10,11 +10,6 @@ define base::defines::users (
   $shell, 
 ) {
 
-# Create wheel group
-  group { 'wheel': 
-    ensure => present,
-  }
-
 # Create user
   user { $username:
     ensure => $ensure,
