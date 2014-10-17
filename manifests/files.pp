@@ -20,7 +20,7 @@ class base::files {
   # Hiera user data
   file { '/etc/puppet/hieradata/global.yaml':
     source  => 'puppet:///modules/role_base/global.yaml',
-    replace => false,
+    #replace => false,
     require => File['/etc/puppet/hieradata'],
   }
 
