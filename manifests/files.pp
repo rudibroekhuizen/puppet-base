@@ -21,7 +21,7 @@ class base::files {
   file { '/etc/puppet/hieradata/global.yaml':
     source  => 'puppet:///modules/role_base/global.yaml',
     #replace => false,
-    require => File['/etc/puppet/hieradata'],
+    #require => File['/etc/puppet/hieradata'],
   }
 
 }
