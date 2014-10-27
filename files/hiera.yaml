@@ -3,7 +3,7 @@
   - yaml
 :hierarchy:
   - defaults
-  - "%{role}"
+  - "%{data_source}"
   - "%{clientcert}"
   - "%{environment}"
   - global
