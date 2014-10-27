@@ -13,9 +13,9 @@ class base::files {
   }
   
   # Create hieradata directory
-  file { '/etc/puppet/hieradata':
-    ensure => 'directory',
-  }
+  #file { '/etc/puppet/hieradata':
+  #  ensure => 'directory',
+  #}
 
   # Hiera user data
   file { '/etc/puppet/hieradata/global.yaml':
