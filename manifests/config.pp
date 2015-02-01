@@ -47,4 +47,7 @@ class base::config {
       ],
   }
   
+  facts::instance { 'owner_email': value => 'rudi.broekhuizen@naturalis.nl'
+  }
+  
 }
