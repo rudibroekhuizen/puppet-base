@@ -1,6 +1,8 @@
 # == Class: base::config
 #
-class base::config {
+class base::config (
+  $owner_email,
+) {
 
 # Make sure hosts file is ok
   host { $::fqdn:
