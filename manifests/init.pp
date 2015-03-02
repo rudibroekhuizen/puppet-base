@@ -75,9 +75,7 @@ class base (
   ) {
 
 # Various configure items
-  class { 'base::config':
-    owner_email => $owner_email
-  }
+  class { 'base::config': }
 
 # Install files
   class { 'base::files':
@@ -86,23 +84,17 @@ class base (
 
 # Add repositories
   class { 'base::repos':
-    repos_array_debian => $repos_array_debian,
-    require            => Class ['base::files'],
+    require => Class ['base::files'],
   }
 
 # Install packages
   class { 'base::packages':
-    packages_hash_debian        => $packages_hash_debian,
-    packages_hash_redhat        => $packages_hash_redhat,
-    packages_attribute_defaults => $packages_attribute_defaults,
-    require                     => Class ['base::repos'],
+    require => Class ['base::repos'],
   }
   
 # Create users
   class { 'base::users':
-    users_hash               => $users_hash,
-    users_attribute_defaults => $users_attribute_defaults,
-    require                  => Class ['base::packages'],
+    require => Class ['base::packages'],
   }  
 
 }
