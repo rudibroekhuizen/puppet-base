@@ -47,8 +47,8 @@ class base::config {
       ],
   }
   
-  #facts::instance { 'owner_email':
-  #  value => $::owner_email
-  #}
+  facts::instance { 'owner_email':
+    value => $base::owner_email
+  }
   
 }
