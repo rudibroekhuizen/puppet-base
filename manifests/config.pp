@@ -1,8 +1,6 @@
 # == Class: base::config
 #
-class base::config (
-  $owner_email,
-  ) {
+class base::config {
 
 # Make sure hosts file is ok
   host { $::fqdn:
@@ -50,7 +48,7 @@ class base::config (
   }
   
   facts::instance { 'owner_email':
-    value => $owner_email
+    value => $::owner_email
   }
   
 }
