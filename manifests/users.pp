@@ -2,5 +2,5 @@
 #
 class base::users {
 
-  create_resources('base::defines::users', $::users_hash, $::users_attribute_defaults)
+  create_resources('base::defines::users', $base::users_hash, $base::users_attribute_defaults)
 }
