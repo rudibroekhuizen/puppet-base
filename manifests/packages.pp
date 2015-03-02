@@ -1,9 +1,9 @@
 # == Class: base::packages
 #
 class base::packages (
-  $packages_hash_debian,
-  $packages_hash_redhat,
-  $packages_attribute_defaults,
+  $::packages_hash_debian,
+  $::packages_hash_redhat,
+  $::packages_attribute_defaults,
   ){
 
 case $::osfamily {
