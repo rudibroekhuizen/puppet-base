@@ -104,4 +104,3 @@ file { "/home/${username}/.ssh":
   }
 
 }
-
