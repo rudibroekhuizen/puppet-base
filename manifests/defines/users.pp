@@ -33,7 +33,7 @@ define base::defines::users (
   } 
 
 # Create .ssh directory
-file { "/home/${username}/.ssh":
+  file { "/home/${username}/.ssh":
     ensure  => directory,
     owner   => $username,
     group   => $username,
