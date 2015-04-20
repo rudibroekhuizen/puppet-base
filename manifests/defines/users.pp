@@ -41,7 +41,7 @@ define base::defines::users (
     require => File["/home/${username}"],
   }
 
-# Create authorized_keys directory
+# Create authorized_keys file
  file { "/home/${username}/.ssh/authorized_keys":
     ensure  => present,
     owner   => $username,
