@@ -10,4 +10,4 @@
   - global
 
 :yaml:
-  :datadir: /etc/puppet/hieradata
+  :datadir: /etc/puppetlabs/puppet/hieradata
