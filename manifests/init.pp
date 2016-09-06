@@ -79,22 +79,22 @@ class base (
 
 # Install files
   class { 'base::files':
-    require => Class ['base::config'],
+    require => Class['base::config'],
   }
 
 # Add repositories
   class { 'base::repos':
-    require => Class ['base::files'],
+    require => Class['base::files'],
   }
 
 # Install packages
   class { 'base::packages':
-    require => Class ['base::repos'],
+    require => Class['base::repos'],
   }
   
 # Create users
   class { 'base::users':
-    require => Class ['base::packages'],
+    require => Class['base::packages'],
   }  
 
 }
