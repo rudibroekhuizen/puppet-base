@@ -16,9 +16,9 @@ class base::config {
   }
   
 # Set timezone using saz/timezone module
-  class { 'timezone':
-    timezone => 'Europe/Amsterdam',
-  }
+#  class { 'timezone':
+#    timezone => 'Europe/Amsterdam',
+#  }
 
 # Allow users belonging wheel group to use sudo
   augeas { 'sudowheel':
