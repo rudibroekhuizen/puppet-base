@@ -15,7 +15,7 @@ class base::config {
     ensure => present,
   }
   
- Set timezone using saz/timezone module
+# Set timezone using saz/timezone module
   class { 'timezone':
     timezone => 'Europe/Amsterdam',
   }
