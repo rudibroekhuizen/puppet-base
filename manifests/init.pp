@@ -39,7 +39,9 @@ class base (
   $repos_array_debian = [ 'ppa:webupd8team/atom',
                           #'ppa:webupd8team/java',
                         ],
-                        
+
+  $vcsrepo_hash = undef,
+
   $owner_email = 'rudi.broekhuizen@naturalis.nl',
                 
   $packages_attribute_defaults = { ensure => installed,
