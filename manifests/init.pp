@@ -76,10 +76,6 @@ class base (
                },
   ) {
 
-  stage { 'pre':
-    before => Stage["main"],
-  }
-
 # Various configure items
   class { 'base::config': }
 
@@ -91,7 +87,6 @@ class base (
 # Add repositories
   class { 'base::repos':
     require => Class['base::files'],
-    stage   => pre
   }
 
 # Install packages
