@@ -18,6 +18,7 @@ class base::repos {
     vcsrepo { "/etc/puppetlabs/code/modules/${title}":
       provider => git,
       source   => $vcsrepo["source"],
+      revision => $vcsrepo["revision"]
     }
   }
   
