@@ -47,12 +47,12 @@ class base (
   $packages_attribute_defaults = { ensure => installed,
                                  },
 
-  $packages_hash_debian = { 'puppet' => { ensure => latest,
-                                        },
+  #$packages_hash_debian = { 'puppet' => { ensure => latest,
+  #                                      },
 
-                            'htop'   => { ensure => latest,
-                                        },
-                          },
+  #                          'htop'   => { ensure => latest,
+  #                                      },
+  #                        },
                          
   $packages_hash_redhat = { 'puppet' => { ensure => latest,
                                         },
