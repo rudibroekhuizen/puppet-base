@@ -46,7 +46,7 @@ class base (
                 
   $packages_attribute_defaults = { ensure => installed,
                                  },
-
+  $packages_hash_debian,
   #$packages_hash_debian = { 'puppet' => { ensure => latest,
   #                                      },
 
