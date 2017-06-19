@@ -14,12 +14,13 @@ class base::repos {
   }
   
   # Download repo's from Github, Subversion, etc.
-  $base::vcsrepo_hash.each |$title, $vcsrepo| {
-    vcsrepo { "/etc/puppetlabs/code/modules/${title}":
-      provider => git,
-      source   => $vcsrepo["source"],
-      revision => $vcsrepo["revision"]
+  if $base::vcsrepo_hash {
+    $base::vcsrepo_hash.each |$title, $vcsrepo| {
+      vcsrepo { "/etc/puppetlabs/code/modules/${title}":
+        provider => git,
+        source   => $vcsrepo["source"],
+        revision => $vcsrepo["revision"]
+      }
     }
   }
-  
 }
