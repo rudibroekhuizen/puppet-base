@@ -1,8 +1,10 @@
 ---
 version: 5
 
-datadir: data
-
+defaults:
+  datadir: data
+  data_hash: yaml_data
+  
 hierarchy:
   - name: "default"
     backend: yaml
