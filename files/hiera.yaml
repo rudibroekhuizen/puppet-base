@@ -1,13 +1,14 @@
----
-:backends:
-  - yaml
-  
-:hierarchy:
-  - global
-  - defaults
-  - "%{data_source}"
-  - "%{clientcert}"
-  - "%{environment}"
+version: 5
 
-:yaml:
-  :datadir: /etc/puppetlabs/puppet/hieradata
+defaults:
+  datadir: data
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "Per-node data"
+    path: "%{data_source}.yaml"
+
+  - name: "Other YAML hierarchy levels"
+    paths:
+      - "global.yaml"
+      - "defaults.yaml"
