@@ -5,7 +5,7 @@
 base::packages_attribute_defaults:
   ensure: 'installed'
 
-users_attribute_defaults:
+base::users_attribute_defaults:
   ensure: 'present'
 
 base::users_hash:
