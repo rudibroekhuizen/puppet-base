@@ -11,5 +11,3 @@
 
 :yaml:
   :datadir: /etc/puppetlabs/puppet/hieradata
-
-:merge_behavior: deeper
