@@ -8,7 +8,7 @@ class base::files {
   }
 
   # Hiera user data
-  file { '/etc/puppetlabs/puppet/hieradata':
+  file { '/etc/puppetlabs/puppet/data':
     source  => 'puppet:///modules/role_base',
     recurse => true
   }
