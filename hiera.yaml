@@ -7,4 +7,4 @@ defaults:
 
 hierarchy:
   - name: "default"
-    path: default.yaml                         
+    path: default.yaml
