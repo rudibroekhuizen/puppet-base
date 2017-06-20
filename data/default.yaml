@@ -2,6 +2,11 @@
 #  - ppa:wireshark-dev/stable
 #  - ppa:webupd8team/java
 
+# Puppet modules needed
+base::vcsrepo_hash:
+  'motd':
+    source: 'https://github.com/saz/puppet-motd'
+
 base::packages_attribute_defaults:
   ensure: 'installed'
 
