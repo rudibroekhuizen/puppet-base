@@ -42,7 +42,7 @@ class base (
   $packages_attribute_defaults = undef,
   $packages_hash_debian = undef,
   $packages_hash_redhat = undef,
-  $users_attribute_defaults = udef,
+  $users_attribute_defaults = undef,
   $users_hash = undef,
   ) {
 
