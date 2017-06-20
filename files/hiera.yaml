@@ -3,11 +3,11 @@
   - yaml
   
 :hierarchy:
+  - global
   - defaults
   - "%{data_source}"
   - "%{clientcert}"
   - "%{environment}"
-  - global
 
 :yaml:
   :datadir: /etc/puppetlabs/puppet/hieradata
