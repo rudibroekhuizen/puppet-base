@@ -3,13 +3,15 @@
 class base::repos {
 
   # Add apt repo's
-  case $::osfamily {
-    debian: { 
-      include apt
-      apt::ppa { $base::repos_array_debian: }
-    }
-    redhat: {
-      include epel
+  if $repos_array_debian {
+    case $::osfamily {
+      debian: { 
+        include apt
+        apt::ppa { $base::repos_array_debian: }
+      }
+      redhat: {
+        include epel
+      }
     }
   }
   
