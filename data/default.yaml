@@ -6,6 +6,8 @@
 base::vcsrepo_hash:
   'motd':
     source: 'https://github.com/saz/puppet-motd'
+  'docker':
+    source: 'https://github.com/memoussati/garethr-docker'
 
 base::packages_attribute_defaults:
   ensure: 'installed'
