@@ -122,7 +122,7 @@ curl https://raw.githubusercontent.com/rudibroekhuizen/puppet-base/master/files/
 
 # Copy data sources to /etc/puppetlabs/puppet/data
 mkdir -p /etc/puppetlabs/puppet/data
-cp /etc/puppetlabs/code/modules/role_base/files/*.yaml /etc/puppetlabs/puppet/data
+cp /etc/puppetlabs/code/modules/base/files/*.yaml /etc/puppetlabs/puppet/data
 
 # Create external fact to set primary data_source
 if [ -n "$1" ];then
