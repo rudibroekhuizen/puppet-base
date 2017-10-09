@@ -114,7 +114,7 @@ for f in $FILES
 sudo apt-get -y install curl
 
 # Download modules from Git and Puppetforge
-curl https://raw.githubusercontent.com/rudibroekhuizen/puppet-role_base/master/files/Puppetfile > /etc/puppetlabs/puppet/Puppetfile
+curl https://raw.githubusercontent.com/rudibroekhuizen/puppet-base/master/files/Puppetfile > /etc/puppetlabs/puppet/Puppetfile
 PUPPETFILE=/etc/puppetlabs/puppet/Puppetfile PUPPETFILE_DIR=/etc/puppetlabs/code/modules r10k --verbose debug puppetfile install
 
 # Copy hiera.yaml to /etc/puppet for hiera configuration settings
