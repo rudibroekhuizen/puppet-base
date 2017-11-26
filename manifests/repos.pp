@@ -10,7 +10,7 @@ class base::repos {
         apt::ppa { $base::repos_array_debian: }
       }
       redhat: {
-        package { epel-release: }
+        package { 'epel-release': }
       }
     }
   }
