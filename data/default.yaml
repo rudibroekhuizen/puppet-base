@@ -57,6 +57,8 @@ base::packages_hash_debian:
     {}
 
 base::packages_hash_redhat:
+  epel-release:
+    {}
   htop:
     ensure: 'latest'
   iftop:
