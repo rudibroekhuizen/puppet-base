@@ -21,15 +21,19 @@ class base::config {
   }
 
 # Allow users belonging wheel group to use sudo
-  augeas { 'sudowheel':
-    context => '/files/etc/sudoers', # target file is /etc/sudoers
-    changes => [
-      'set spec[user = "%wheel"]/user %wheel',
-      'set spec[user = "%wheel"]/host_group/host ALL',
-      'set spec[user = "%wheel"]/host_group/command ALL',
-      'set spec[user = "%wheel"]/host_group/command/runas_user ALL',
-      'set spec[user = "%wheel"]/host_group/command/tag NOPASSWD',
-      ],
+#  augeas { 'sudowheel':
+#    context => '/files/etc/sudoers', # target file is /etc/sudoers
+#    changes => [
+#      'set spec[user = "%wheel"]/user %wheel',
+#      'set spec[user = "%wheel"]/host_group/host ALL',
+#      'set spec[user = "%wheel"]/host_group/command ALL',
+#      'set spec[user = "%wheel"]/host_group/command/runas_user ALL',
+#      'set spec[user = "%wheel"]/host_group/command/tag NOPASSWD',
+#      ],
+#  }
+  sudo::conf { 'wheel':
+    priority => 10,
+    content  => "%wheel ALL=(ALL) NOPASSWD: ALL",
   }
 
   augeas { "sshd_config":
