@@ -36,6 +36,11 @@ class base::config {
     content  => "%wheel ALL=(ALL) NOPASSWD: ALL",
   }
 
+  sudo::conf { 'vagrant':
+    priority => 10,
+    content  => "%wheel ALL=(ALL) NOPASSWD: ALL",
+  }
+
   augeas { "sshd_config":
     context => "/files/etc/ssh/sshd_config",
     changes => [
