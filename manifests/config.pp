@@ -37,7 +37,7 @@ class base::config {
   }
 
   sudo::conf { 'vagrant':
-    priority => 10,
+    priority => 15,
     content  => "%wheel ALL=(ALL) NOPASSWD: ALL",
   }
 
