@@ -3,21 +3,16 @@
 class base::repos {
 
   # Add apt repo's
-#  if $repos_array_debian {
-#    case $::osfamily {
-#      debian: { 
-#        include apt
-#        apt::ppa { $base::repos_array_debian: }
-#      }
-#      redhat: {
-#        package { 'epel-release': }
-#      }
-#    }
-#  }
-
-  if $repos_array_debian {
-    include apt
-    apt::ppa { $base::repos_array_debian: }
+  if $repos_array_debian or $repos_array_redhat{
+    case $::osfamily {
+      debian: { 
+        include apt
+        apt::ppa { $base::repos_array_debian: }
+      }
+      redhat: {
+        package { 'epel-release': }
+      }
+    }
   }
   
   # Download repo's from Github, Subversion, etc.
