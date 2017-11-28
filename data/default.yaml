@@ -45,8 +45,6 @@ base::packages_hash_debian:
     {}
 # curl:
 #   {}
-  sudo:
-    {}
   screen:
     {}
   grc:
