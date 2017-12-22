@@ -55,6 +55,8 @@ base::packages_hash_debian:
     {}
   apt-transport-https: # packet.net
     {}
+  httpie:
+    {}
 
 base::packages_hash_redhat:
   epel-release:
