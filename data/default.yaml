@@ -57,6 +57,8 @@ base::packages_hash_debian:
     {}
   httpie:
     {}
+  xsel: # xsel -b < file.txt (file to clipboard)
+    {}
 
 base::packages_hash_redhat:
   epel-release:
