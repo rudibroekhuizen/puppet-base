@@ -1,14 +1,16 @@
-version: 5
+### moved to role_base module ###
 
-defaults:
-  datadir: data
-  data_hash: yaml_data
+#version: 5
 
-hierarchy:
-  - name: "Per-node data"
-    path: "%{data_source}.yaml"
+#defaults:
+#  datadir: data
+#  data_hash: yaml_data
 
-  - name: "Other YAML hierarchy levels"
-    paths:
-      - "global.yaml"
-      - "defaults.yaml"
+#hierarchy:
+#  - name: "Per-node data"
+#    path: "%{data_source}.yaml"
+
+#  - name: "Other YAML hierarchy levels"
+#    paths:
+#      - "global.yaml"
+#      - "defaults.yaml"
